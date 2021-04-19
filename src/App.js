@@ -1,56 +1,54 @@
 import './App.css';
 import { GoogleMap, LoadScript,Marker  } from '@react-google-maps/api';
-import React, { useState,useEffect } from 'react';
 
 function App() {
-
-const [ currentPosition, setCurrentPosition ] = useState({});
-const [count, setCount] = useState([]);
-const [input, setInput] =useState("");
-
-  const mapStyles = {     
-
+  const mapStyles = {        
     height: "100vh",
     width: "100%"};
-   
+  
   const defaultCenter = {
     lat: 41.3851, lng: 2.1734
   }
-const handleChange=(event)=> {
-  setInput(event.target.value);
-
-  }
-  
-
-
-
-
-
-
-
-  const search = () => {
-
-    fetch("http://ec2-3-19-27-17.us-east-2.compute.amazonaws.com:8090/location/"+input)
-      .then((response) => response.json())
-      .then((json) => setCount(json))
-      .catch((error) =>console.log(error)) 
-      
-      console.log(input)
-     
-  };
-
-
-
-
-
-
-
+  const locations = [
+    {
+      name: "Location 1",
+      location: { 
+        lat: 41.3954,
+        lng: 2.162 
+      },
+    },
+    {
+      name: "Location 2",
+      location: { 
+        lat: 41.3917,
+        lng: 2.1649
+      },
+    },
+    {
+      name: "Location 3",
+      location: { 
+        lat: 41.3773,
+        lng: 2.1585
+      },
+    },
+    {
+      name: "Location 4",
+      location: { 
+        lat: 41.3797,
+        lng: 2.1682
+      },
+    },
+    {
+      name: "Location 5",
+      location: { 
+        lat: 41.4055,
+        lng: 2.1915
+      },
+    }
+  ];
   return (
     <div className="App">
-      <input type="text" name="name" value={input} onChange={handleChange}/>
-      <button onClick={()=>search()}>
-  Add Markers
-</button>
+      
       <LoadScript
        googleMapsApiKey='AIzaSyDhc84YoOi8nKfHqGBzgwFlbh36uE9_7p8'>
         <GoogleMap
@@ -59,10 +57,10 @@ const handleChange=(event)=> {
           center={defaultCenter}
           
         >
-         {
-            count.map(item => {
+          {
+            locations.map(item => {
               return (
-              <Marker key={item.locationId} position={{lng: item.longitude,lat:item.latitude}}/>
+              <Marker key={item.name} position={item.location} title={item.name}/>
               )
             })
          }
