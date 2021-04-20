@@ -30,7 +30,7 @@ function App() {
 
   const search = () => {
     fetch(
-      "http://ec2-3-19-27-17.us-east-2.compute.amazonaws.com:8090/location/" +
+      "//ec2-3-19-27-17.us-east-2.compute.amazonaws.com:8090/location/" +
       input
     )
       .then((response) => response.json())
