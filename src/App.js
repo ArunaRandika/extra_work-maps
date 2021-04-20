@@ -49,7 +49,7 @@ function App() {
         name="description"
         content="Ideas page using react helmet very easy to implement "
       />
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+      
     </Helmet>
     <div className="App">
       <div className="menuBtn">
