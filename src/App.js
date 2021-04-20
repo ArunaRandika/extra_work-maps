@@ -7,7 +7,7 @@ import ins from './assests/ins.png';
 import lin from './assests/lin.png'; 
 import wha from './assests/wha.png'; 
 import tw from './assests/tw.png'; 
-
+import HttpsRedirect from 'react-https-redirect';
 
 function App() {
   const [currentPosition, setCurrentPosition] = useState({});
@@ -40,6 +40,7 @@ function App() {
   };
 
   return (
+    <HttpsRedirect>
     <div className="App">
       <div className="menuBtn">
         <p>Menu</p>
@@ -161,6 +162,7 @@ function App() {
 
 
     </div>
+    </HttpsRedirect>
   );
 }
 
