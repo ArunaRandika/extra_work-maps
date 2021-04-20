@@ -63,7 +63,7 @@ function App() {
               <a href="https://aayu-mobile-application.github.io/Aayu-Website-extra-work/index.html">Home</a>
             </li>
             <li>
-              <a href="http://localhost:3000/">
+              <a href="https://aayu-map.netlify.app/">
                 Aayu Map
             </a>
             </li>
@@ -125,7 +125,7 @@ function App() {
               <div className="border" />
               <ul>
                 <a href="https://aayu-mobile-application.github.io/Aayu-Website-extra-work/index.html"><li>Home</li></a>
-                <a href="http://localhost:3000/"><li>Aayu Map</li></a>
+                <a href="https://aayu-map.netlify.app/"><li>Aayu Map</li></a>
                 <a href="https://aayu-mobile-application.github.io/Aayu-Website-extra-work/Quiz/student3_quiz_home.html"><li>Quiz Challenge</li></a>
                 <a href="https://aayu-mobile-application.github.io/Aayu-Website-extra-work/Description/des.html"><li>Explore Aayu</li></a>
                 <a href="https://aayu-mobile-application.github.io/Aayu-Website-extra-work/About/about.html"><li>Aayu About</li></a>
