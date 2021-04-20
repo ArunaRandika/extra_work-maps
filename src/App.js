@@ -8,6 +8,7 @@ import lin from './assests/lin.png';
 import wha from './assests/wha.png'; 
 import tw from './assests/tw.png'; 
 import HttpsRedirect from 'react-https-redirect';
+import { Helmet } from "react-helmet";
 
 function App() {
   const [currentPosition, setCurrentPosition] = useState({});
@@ -41,6 +42,15 @@ function App() {
 
   return (
     <HttpsRedirect>
+      <Helmet>
+      <title>Aayu Map</title>
+      <meta name="keywords" content="HTML,CSS,JavaScript" />
+      <meta
+        name="description"
+        content="Ideas page using react helmet very easy to implement "
+      />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+    </Helmet>
     <div className="App">
       <div className="menuBtn">
         <p>Menu</p>
