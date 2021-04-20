@@ -30,7 +30,7 @@ function App() {
 
   const search = () => {
     fetch(
-      "//ec2-3-19-27-17.us-east-2.compute.amazonaws.com:8090/location/" +
+      "https://aayu-backend-api.herokuapp.com/location/" +
       input
     )
       .then((response) => response.json())
